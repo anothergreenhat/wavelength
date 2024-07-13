@@ -9,3 +9,6 @@ python3 wavelength.py
 ```
 
 To stop playing, just press Control-C (^C).
+
+## Credit
+Some of the prompts in `prompts.txt` are from Eliza Boston on [The Inkline](https://the-inkline.com/wavelength-game-questions/). The rest were generated using [Google Gemini](https://gemini.google.com).
