@@ -11,6 +11,17 @@ def control_text(*msg):
     input()
 
 
+def control_reply(msg):
+    data = -1
+    while True:
+        try:
+            data = int(input(msg))
+            break
+        except ValueError:
+            print("Invalid input")
+    return data
+
+
 def get_spikes():
     spike = random.choice(range(1,101))
     spikes = []
@@ -94,7 +105,8 @@ def main():
             print(top)
             print('|'+('-'*100)+'|')
             print()
-            guess = int(input('PLAYER 1: open your eyes and make your guess now!\nEnter your guess: '))
+            print('PLAYER 1: open your eyes and make your guess now!')
+            guess = control_reply('Enter your guess: ')
             control_text('Are you ready to see the wheel?')
             show_spikes(spikes, prompt)
             print(' '+(' '*(guess-1))+'^'+(' '*(100-guess))+' ')
